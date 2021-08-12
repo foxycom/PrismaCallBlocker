@@ -1,7 +1,7 @@
 package com.prismaqf.callblocker.actions;
 
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
+import androidx.test.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.prismaqf.callblocker.utils.DebugDBFileName;
