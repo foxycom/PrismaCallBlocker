@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationCompat.Builder;
 
 /**
  * Call detect service
@@ -40,7 +42,9 @@ import android.util.Log;
     public int getNumReceived() {return myCallHelper.getNumReceived();}
 
     public int getNumTriggered() {return myCallHelper.getNumTriggered();}
-    
+
+
+
 
     @Override
     public int onStartCommand(final Intent intent, int flags, int startId) {
@@ -63,7 +67,14 @@ import android.util.Log;
 
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, CallBlockerManager.class), 0);
-        Notification notification = new Notification.Builder(this)
+        NotificationCompat.Builder builder = new Builder(this, "mychannel")
+              .setSmallIcon(R.drawable.police)
+              .setContentTitle(getText(R.string.app_name))
+              .setContentText(getText(R.string.tx_notification))
+              .setContentIntent(pendingIntent)
+              .setTicker(getText(R.string.app_name));
+
+        Notification notification = new Notification.Builder(this, "mychannel")
                 .setContentTitle(getText(R.string.app_name))
                 .setContentText(getText(R.string.tx_notification))
                 .setSmallIcon(R.drawable.police)

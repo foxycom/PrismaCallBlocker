@@ -128,6 +128,7 @@ public class CallBlockerManagerTest
         Intent i = new Intent();
         i.setAction(Intent.ACTION_MAIN);
         i.addCategory(Intent.CATEGORY_HOME);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ctx.startActivity(i);
         SystemClock.sleep(5000);
         //now try to start the service from the background
