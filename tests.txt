@@ -1,4 +1,6 @@
 com.prismaqf.callblocker.ApplicationTest testApplicationTestCaseSetUpProperly
+com.prismaqf.callblocker.CallBlockerManagerTest testContactResolverDoesNotThrow
+com.prismaqf.callblocker.CallBlockerManagerTest testStartServiceWhenInBackground
 com.prismaqf.callblocker.CallBlockerManagerTest checkThatTurningOnServiceChangesText
 com.prismaqf.callblocker.CallBlockerManagerTest testCallsBroadcastReceiver
 com.prismaqf.callblocker.CallBlockerManagerTest checkServiceStateOnSharedPreferences
@@ -6,6 +8,7 @@ com.prismaqf.callblocker.CallBlockerManagerTest checkStatusOfService
 com.prismaqf.callblocker.CallBlockerManagerTest checkDisplay
 com.prismaqf.callblocker.EditFilterRuleTest SmokeTest
 com.prismaqf.callblocker.EditFiltersTest PickActionTest
+com.prismaqf.callblocker.EditFiltersTest SelectFilterTest
 com.prismaqf.callblocker.EditFiltersTest EditTheCalendarRule
 com.prismaqf.callblocker.EditFiltersTest DeleteActionTest
 com.prismaqf.callblocker.EditFiltersTest UndoActionTest
@@ -59,6 +62,7 @@ com.prismaqf.callblocker.NewFilterRuleTest TestDeleteActionMissingOnCreate
 com.prismaqf.callblocker.NewFilterRuleTest TestRotationWithEmptyText
 com.prismaqf.callblocker.RebootReceiverTest testIdleServiceWillNotStart
 com.prismaqf.callblocker.RebootReceiverTest testRunningServiceWillStartOnBoot
+com.prismaqf.callblocker.UpdateCalendarRuleTest TestDeleteRuleWhenUsedShouldFlag
 com.prismaqf.callblocker.UpdateCalendarRuleTest TestDeleteAction
 com.prismaqf.callblocker.UpdateCalendarRuleTest TestChangeAction
 com.prismaqf.callblocker.UpdateCalendarRuleTest TestUndoAction
