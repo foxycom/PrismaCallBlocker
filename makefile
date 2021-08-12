@@ -56,7 +56,7 @@ stop-emulator:
 espresso-tests.log : app-original.apk app-androidTest.apk running-emulator
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-original.apk
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-androidTest.apk	
-	$(ADB) shell am instrument -w -r com.prismaqf.callblocker.test/android.support.test.runner.AndroidJUnitRunner | tee espresso-tests.log
+	$(ADB) shell am instrument -w -r com.prismaqf.callblocker.test/androidx.test.runner.AndroidJUnitRunner | tee espresso-tests.log
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) stop-all-emulators
 	rm running-emulator
 
@@ -72,7 +72,7 @@ espresso-tests.log : app-original.apk app-androidTest.apk running-emulator
 	echo "Tracing test $(shell echo "$(@)" | tr "_" "#" | sed -e "s|.testlog||")"
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-instrumented.apk
 	export ABC_CONFIG=$(ABC_CFG) &&$(ABC) install-apk app-androidTest.apk
-	$(ADB) shell am instrument -w -e class $(shell echo "$(@)" | tr "_" "#" | sed -e "s|.testlog||") com.prismaqf.callblocker.test/android.support.test.runner.AndroidJUnitRunner | tee $(@)
+	$(ADB) shell am instrument -w -e class $(shell echo "$(@)" | tr "_" "#" | sed -e "s|.testlog||") com.prismaqf.callblocker.test/androidx.test.runner.AndroidJUnitRunner | tee $(@)
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) copy-traces com.prismaqf.callblocker ./traces/$(shell echo "$(@)" | sed -e "s|.testlog||") force-clean
 
 carve-all : .traced app-original.apk
