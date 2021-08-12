@@ -1,6 +1,6 @@
 package com.prismaqf.callblocker.utils;
 
-import android.support.test.espresso.IdlingResource;
+import androidx.test.espresso.IdlingResource;
 import android.view.View;
 
 /**

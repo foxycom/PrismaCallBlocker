@@ -1,7 +1,7 @@
 package com.prismaqf.callblocker;
 
 import android.os.Parcel;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.prismaqf.callblocker.rules.FilterRule;
 

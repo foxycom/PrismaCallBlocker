@@ -1,7 +1,7 @@
 package com.prismaqf.callblocker.utils;
 
 
-import android.support.test.espresso.core.internal.deps.guava.base.Predicate;
+import androidx.test.espresso.core.internal.deps.guava.base.Predicate;
 import android.view.View;
 
 import org.hamcrest.CustomMatcher;
