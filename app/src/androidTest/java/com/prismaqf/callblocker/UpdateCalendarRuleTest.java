@@ -1,11 +1,13 @@
 package com.prismaqf.callblocker;
 
 
+import android.Manifest.permission;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.rule.GrantPermissionRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.prismaqf.callblocker.filters.FilterHandle;
@@ -22,6 +24,7 @@ import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -46,8 +49,13 @@ public class UpdateCalendarRuleTest {
     public static final DebugDBFileName myDebugDB = new DebugDBFileName();
 
     //Make the rule but don't start the activity
-    @Rule
     public final ActivityTestRule<CallBlockerManager> myActivityRule = new ActivityTestRule<>(CallBlockerManager.class);
+
+    public final GrantPermissionRule permissionRule = GrantPermissionRule
+          .grant(permission.READ_CONTACTS, permission.CALL_PHONE);
+
+    @Rule
+    public final RuleChain chian = RuleChain.outerRule(permissionRule).around(myActivityRule);
 
     @Before
     public void before() {

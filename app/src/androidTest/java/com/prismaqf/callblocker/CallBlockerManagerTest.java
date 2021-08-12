@@ -1,6 +1,8 @@
 package com.prismaqf.callblocker;
 
 
+import android.Manifest;
+import android.Manifest.permission;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.provider.ContactsContract;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.rule.GrantPermissionRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.prismaqf.callblocker.utils.DebugDBFileName;
@@ -19,6 +22,7 @@ import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -35,8 +39,13 @@ public class CallBlockerManagerTest
     @ClassRule
     public static final DebugDBFileName myDebugDB = new DebugDBFileName();
 
-    @Rule
     public final ActivityTestRule<CallBlockerManager> mActivityRule = new ActivityTestRule<>(CallBlockerManager.class);
+
+    public final GrantPermissionRule permissionRule = GrantPermissionRule
+          .grant(permission.READ_CONTACTS, permission.CALL_PHONE);
+
+    @Rule
+    public final RuleChain chian = RuleChain.outerRule(permissionRule).around(mActivityRule);
 
     @Before
     public void before() {

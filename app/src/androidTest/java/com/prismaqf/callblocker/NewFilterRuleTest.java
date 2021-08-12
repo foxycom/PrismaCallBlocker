@@ -1,5 +1,6 @@
 package com.prismaqf.callblocker;
 
+import android.Manifest.permission;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.test.espresso.action.ReplaceTextAction;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.rule.GrantPermissionRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.widget.EditText;
 
@@ -19,6 +21,7 @@ import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.RuleChain;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
@@ -48,8 +51,13 @@ public class NewFilterRuleTest {
     @ClassRule
     public static final DebugDBFileName myDebugDB = new DebugDBFileName();
 
+    public final ActivityTestRule<EditCalendarRules> myActivityRule = new ActivityTestRule<>(EditCalendarRules.class);
+
+    public final GrantPermissionRule permissionRule = GrantPermissionRule
+          .grant(permission.READ_CONTACTS, permission.CALL_PHONE);
+
     @Rule
-    public final ActivityTestRule<EditFilterRules> myActivityRule = new ActivityTestRule<>(EditFilterRules.class);
+    public final RuleChain chian = RuleChain.outerRule(permissionRule).around(myActivityRule);
 
     @Before
     public void before() {
