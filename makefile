@@ -28,7 +28,7 @@ clean-all :
 app-original.apk : 
 	export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) assembleDebug && \
-	mv app/build/outputs/apk/app-debug.apk . && \
+	mv app/build/outputs/apk/debug/app-debug.apk . && \
 	$(ABC) sign-apk app-debug.apk && \
 	mv -v app-debug.apk app-original.apk
 
@@ -41,7 +41,7 @@ app-instrumented.apk : app-original.apk
 app-androidTest.apk :
 	export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) assembleAndroidTest && \
-	mv app/build/outputs/apk/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
+	mv app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
 	$(ABC) sign-apk app-androidTest-unsigned.apk && \
 	mv -v app-androidTest-unsigned.apk app-androidTest.apk
 
