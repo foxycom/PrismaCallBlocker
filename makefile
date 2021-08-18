@@ -108,7 +108,7 @@ coverage-unit-tests :
 	$(GW) clean jacocoTestReport && \
 	cp -r app/build/reports/jacoco/jacocoTestsReport unit-tests-coverage
 
-coverage-carved-tests : copy-shadows
+coverage-carved-tests :
 	$(GW) jacocoUnitTestCoverage -PcarvedTests --info && \
 	mkdir -p carved-test-coverage && \
 	cp -r app/build/carvedTest/coverage carved-test-coverage
