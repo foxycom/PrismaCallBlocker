@@ -7,3 +7,11 @@
 /build
 /captures
 /projectFilesBackup
+
+
+# ABC
+traces
+*.testlog
+app-androidTest.apk
+app-instrumented.apk
+app-original.apk
