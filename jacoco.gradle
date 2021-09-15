@@ -5,6 +5,7 @@ jacoco {
     // This should match the one inside build.gradle
     toolVersion = '0.8.6'
 }
+def carvedTests = project.hasProperty('carvedTests')// ? project.getProperty('carvedTests') : false //Default value false
 
 tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
