@@ -163,9 +163,10 @@ $(ESPRESSO_TESTS_COVERAGE):
 	fi
 # Execute the gradle target
 	@echo "Running Test $(TEST_NAME)"
-	$(GW) -PjacocoEnabled=true -PcarvedTests=false -Pandroid.testInstrumentationRunnerArguments.class=$(TEST_NAME) jacocoGUITestCoverage
+	$(GW) -PjacocoEnabled=true -PcarvedTests=false -Pandroid.testInstrumentationRunnerArguments.class=$(TEST_NAME) clean jacocoGUITestCoverage
 	mv -v app/build/reports/jacoco/jacocoGUITestCoverage $(COVERAGE_FOLDER)
-	
+	mv -v app/build/outputs/code_coverage/debugAndroidTest/connected/*coverage.ec $(COVERAGE_FOLDER)/$(TEST_NAME).ec
+
 # Phony  target
 coverage-for-each-espresso-test :  $(ESPRESSO_TESTS_COVERAGE)
 	@echo "Processing: $(shell echo $? | tr " " "\n")"

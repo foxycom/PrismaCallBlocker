@@ -19,6 +19,7 @@ import com.prismaqf.callblocker.utils.InstrumentTestHelper;
 
 import org.junit.Before;
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
@@ -134,6 +135,7 @@ public class NewFilterRuleTest {
     }
 
     @Test
+    @Ignore
     public void TestHelpAction() {
         intent.putStringArrayListExtra(NewEditActivity.KEY_RULENAMES, new ArrayList<String>());
         ctx.startActivity(intent);

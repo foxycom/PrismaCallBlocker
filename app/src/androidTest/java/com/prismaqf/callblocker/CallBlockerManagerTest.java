@@ -18,6 +18,7 @@ import com.prismaqf.callblocker.utils.DebugDBFileName;
 
 import org.junit.Before;
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
@@ -83,6 +84,7 @@ public class CallBlockerManagerTest
     }
 
     @Test
+    @Ignore
     public void checkServiceStateOnSharedPreferences() {
         Activity myActivity = mActivityRule.getActivity();
         Context myCtx = myActivity.getApplicationContext();

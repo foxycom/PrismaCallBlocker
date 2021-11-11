@@ -51,5 +51,4 @@ ext {
     // Set default values here. Those may be overwritten inside app/build.gradle
     testReportPrefix = "${buildDir}/carvedTest/testExecution"
     coverageReportPrefix = "${buildDir}/carvedTest/coverage"
-
 }

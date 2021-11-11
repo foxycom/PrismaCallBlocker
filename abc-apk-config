@@ -5,3 +5,4 @@ make_android_test_apk_path = app/build/outputs/apk/androidTest/debug/app-debug-a
 make_assemble_apk_command = assembleDebug
 make_assemble_android_test_command = assembleAndroidTest
 make_test_runner = com.prismaqf.callblocker.test/androidx.test.runner.AndroidJUnitRunner
+make_espresso_coverage_file_path = app/build/outputs/code_coverage/debugAndroidTest/connected/*coverage.ec

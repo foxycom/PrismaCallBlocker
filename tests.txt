@@ -1,9 +1,7 @@
-com.prismaqf.callblocker.ApplicationTest testApplicationTestCaseSetUpProperly
 com.prismaqf.callblocker.CallBlockerManagerTest testContactResolverDoesNotThrow
 com.prismaqf.callblocker.CallBlockerManagerTest testStartServiceWhenInBackground
 com.prismaqf.callblocker.CallBlockerManagerTest checkThatTurningOnServiceChangesText
 com.prismaqf.callblocker.CallBlockerManagerTest testCallsBroadcastReceiver
-com.prismaqf.callblocker.CallBlockerManagerTest checkServiceStateOnSharedPreferences
 com.prismaqf.callblocker.CallBlockerManagerTest checkStatusOfService
 com.prismaqf.callblocker.CallBlockerManagerTest checkDisplay
 com.prismaqf.callblocker.EditFilterRuleTest SmokeTest
@@ -43,7 +41,6 @@ com.prismaqf.callblocker.NewCalendarRuleTest TestSaveAction
 com.prismaqf.callblocker.NewCalendarRuleTest TestEmptyNameShouldFlag
 com.prismaqf.callblocker.NewCalendarRuleTest TestSingleDays
 com.prismaqf.callblocker.NewCalendarRuleTest TestNoDays
-com.prismaqf.callblocker.NewCalendarRuleTest TestDynamicStateOnRotation
 com.prismaqf.callblocker.NewCalendarRuleTest TestActionOnCreating
 com.prismaqf.callblocker.NewCalendarRuleTest TestParcelable
 com.prismaqf.callblocker.NewCalendarRuleTest TestAllDays
@@ -53,7 +50,6 @@ com.prismaqf.callblocker.NewFilterRuleTest TestUsedNameShouldFlag
 com.prismaqf.callblocker.NewFilterRuleTest TestChangeActionMissingOnCreate
 com.prismaqf.callblocker.NewFilterRuleTest TestSaveAction
 com.prismaqf.callblocker.NewFilterRuleTest TestEmptyNameShouldFlag
-com.prismaqf.callblocker.NewFilterRuleTest TestHelpAction
 com.prismaqf.callblocker.NewFilterRuleTest TestButtonFilterPatterns
 com.prismaqf.callblocker.NewFilterRuleTest TestDynamicStateOnRotation
 com.prismaqf.callblocker.NewFilterRuleTest TestActionOnCreating
