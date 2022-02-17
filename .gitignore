@@ -14,4 +14,4 @@ traces
 *.testlog
 app-androidTest.apk
 app-instrumented.apk
-app-original.apk
+app-original.apk.idea
