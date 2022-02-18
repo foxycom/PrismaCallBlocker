@@ -1,5 +1,5 @@
 ### MAIN VARIABLES
-GW=./gradlew --console plain --no-parallelism
+GW=./gradlew --console plain
 ABC=../../scripts/abc.sh
 ABC_CFG=../../scripts/.abc-config
 # -Dabc.make.android.lifecycle.events.explicit
