@@ -13,6 +13,7 @@ import com.prismaqf.callblocker.rules.FilterRule;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ import java.util.Locale;
 
 import static org.junit.Assert.*;
 
+@Ignore
 @SuppressWarnings("unused")
 @RunWith(AndroidJUnit4.class)
 public class DbHelperTest {
