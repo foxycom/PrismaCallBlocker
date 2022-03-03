@@ -12,3 +12,4 @@ make_instr_skip_classes = com.prismaqf.callblocker.R
 make_instr_filter_packages = java.io
 make_instr_filter_classes = java.lang.StringBuilder
 make_carving_filter_methods = com.prismaqf.callblocker.rules.FilterRule.makeRegex, com.prismaqf.callblocker.rules.FilterRule.filterUnwanted
+make_trace_multiple_threads = false
