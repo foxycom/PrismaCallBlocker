@@ -8,3 +8,7 @@ make_assemble_android_test_command = assembleAndroidTest
 make_test_runner = com.prismaqf.callblocker.test/androidx.test.runner.AndroidJUnitRunner
 make_espresso_coverage_file_path = app/build/outputs/code_coverage/debugAndroidTest/connected/*coverage.ec
 make_permissions =
+make_instr_skip_classes = com.prismaqf.callblocker.R
+make_instr_filter_packages = java.io
+make_instr_filter_classes = java.lang.StringBuilder
+make_carving_filter_methods = com.prismaqf.callblocker.rules.FilterRule.makeRegex, com.prismaqf.callblocker.rules.FilterRule.filterUnwanted
