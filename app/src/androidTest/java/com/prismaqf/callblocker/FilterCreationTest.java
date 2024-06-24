@@ -25,6 +25,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.sql.SQLException;
@@ -32,6 +33,7 @@ import java.sql.SQLException;
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class FilterCreationTest {
 

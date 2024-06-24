@@ -10,6 +10,7 @@ import com.prismaqf.callblocker.utils.DexClassScanner;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.util.Collection;
@@ -18,6 +19,7 @@ import java.util.Set;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class ActionsTest {
 

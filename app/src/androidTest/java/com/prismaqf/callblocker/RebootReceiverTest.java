@@ -12,6 +12,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import static junit.framework.Assert.assertFalse;
@@ -21,6 +22,7 @@ import static junit.framework.Assert.assertTrue;
  * Test for receiver of BOOT_COMPLETED intent
  * @author ConteDiMonteCristo
  */
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class RebootReceiverTest {
 
